@@ -3,7 +3,7 @@
         <output value = "Привет!"/>
         <context>
             <input pattern = "repeat($Number)">
-                <var name = "Symptoms" value = 'join(&qout, $Number, &qout, ",")'/>
+                <var name = "Symptoms" value = 'join(&qout;, $Number, &qout;, ",")'/>
             </input>
         </context>
     </input>
