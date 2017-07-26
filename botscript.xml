@@ -2,17 +2,17 @@
     <input pattern = "/start">
         <output value = "Привет!"/>
         <context>
-            <input pattern = "repeat($Number)">
+            <input pattern = "repeat($Text)">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
                             i = 0;
                             str = "[";
-                            while ($Number[i]) {
+                            while ($Text[i]) {
                                 if (i != 0) {
                                     str += ',';
                                 }
-                                str += '"' + $Number[i] + '"';
+                                str += '"' + $Text[i] + '"';
                                 i++;
                             }
                             str += ']';
