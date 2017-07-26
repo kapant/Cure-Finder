@@ -1,14 +1,10 @@
 <context>
     <input pattern = "/start">
-        <var name = "Out">
-            <script>
-                <![CDATA[
-                    var fso = new ActiveXObject("Scripting.FileSystemObject");
-                    var file = fso.OpenTextFile("./data.txt", 8);
-                    file.ReadLine();
-                ]]>
-            </script>
-        </var>
-        <output value = "$Out"/>
+        <output value = "Привет!"/>
+        <context>
+            <input pattern = "repeat($Text,)">
+                <output value = 'join($Text, ",")'/>
+            </input>
+        </context>
     </input>
 </context>
