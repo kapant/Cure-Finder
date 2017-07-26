@@ -3,7 +3,7 @@
         <output value = "Привет!"/>
         <context>
             <input pattern = "repeat($Number)">
-                <var name = "Symptoms">
+                <var name = "Symptomes">
                     <script>
                         <![CDATA[
                             i = 0;
@@ -13,16 +13,10 @@
                                 i++;
                             }
                             str + ']';
+                            JSON.parse(str);
                         ]]>
                     </script>
                 </var>
-                <output>
-                    <script>
-                        <![CDATA[
-                            $Symptoms[2];
-                        ]]>
-                    </script>
-                </output>
             </input>
         </context>
     </input>
