@@ -7,12 +7,12 @@
                     <script>
                         <![CDATA[
                             i = 0;
-                            str = "";
+                            str = "[";
                             while ($Number[i]) {
-                                str += '"' + $Number[i] + '"';
+                                str += '"' + $Number[i] + '",';
                                 i++;
                             }
-                            str;
+                            str + ']';
                         ]]>
                     </script>
                 </var>
