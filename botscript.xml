@@ -2,7 +2,7 @@
     <input pattern = "/start">
         <output value = "Привет!"/>
         <context>
-            <input pattern = "repeat($Number, ',')">
+            <input pattern = "repeat($Number)">
                 <var name = "Symptoms" value = 'join("$Number", ",")'/>
             </input>
         </context>
