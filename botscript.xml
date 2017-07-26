@@ -16,7 +16,13 @@
                         ]]>
                     </script>
                 </var>
-                <output value = "$Symptoms[2]"/>
+                <output>
+                    <script>
+                        <![CDATA[
+                            $Symptoms[2];
+                        ]]>
+                    </script>
+                </output>
             </input>
         </context>
     </input>
