@@ -4,15 +4,17 @@
         <context>
             <input pattern = "repeat($Number)">
                 <var name = "Symptoms">
-                    <![CDATA[
-                        i = 0;
-                        str = "";
-                        while ($Number[i]) {
-                            str += '"' + $Number[i] + '"';
-                            i++;
-                        }
-                        str;
-                    ]]>
+                    <script>
+                        <![CDATA[
+                            i = 0;
+                            str = "";
+                            while ($Number[i]) {
+                                str += '"' + $Number[i] + '"';
+                                i++;
+                            }
+                            str;
+                        ]]>
+                    </script>
                 </var>
             </input>
         </context>
