@@ -2,8 +2,8 @@
     <input pattern = "/start">
         <output value = "Привет!"/>
         <context>
-            <input pattern = "repeat($Text,)">
-                <var name = "Symptoms" value = '{"symps": [join("$Text", ","")]}'/>
+            <input pattern = "repeat($Number)">
+                <var name = "Symptoms" value = '{"symps": [join("$Number", ","")]}'/>
             </input>
         </context>
     </input>
