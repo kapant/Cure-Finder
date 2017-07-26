@@ -3,13 +3,7 @@
         <output value = "Привет!"/>
         <context>
             <input pattern = "repeat($Text,)">
-                <var name = "Symptoms">
-                    {
-                        "symps": [
-                            join("$Text", ',')
-                        ]
-                    }
-                </var>
+                <var name = "Symptoms" value = '{"symps": [join("$Text", ","")]}'/>
             </input>
         </context>
     </input>
