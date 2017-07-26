@@ -15,7 +15,7 @@
                                 str += '"' + $Number[i] + '"';
                                 i++;
                             }
-                            str + ']';
+                            str += ']';
                             JSON.parse(str);
                         ]]>
                     </script>
