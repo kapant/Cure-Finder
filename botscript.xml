@@ -9,10 +9,13 @@
                             i = 0;
                             str = "[";
                             while ($Number[i]) {
-                                str += '"' + $Number[i] + '",';
+                                if (i != 0) {
+                                    str += ',';
+                                }
+                                str += '"' + $Number[i] + '"';
                                 i++;
                             }
-                            str - ',' + ']';
+                            str + ']';
                             JSON.parse(str);
                         ]]>
                     </script>
