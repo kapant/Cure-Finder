@@ -16,7 +16,7 @@
                         ]]>
                     </script>
                 </var>
-                <output value = "$Symptoms"/>
+                <output value = "$Symptoms[2]"/>
             </input>
         </context>
     </input>
