@@ -3,7 +3,7 @@
         <output value = "Привет!"/>
         <context>
             <pattern name = "List" value = "$Text(,| и)"/>
-            <input pattern = "repeat($List)">
+            <input pattern = "$Text(,| и)">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
