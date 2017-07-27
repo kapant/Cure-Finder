@@ -3,17 +3,17 @@
         <output value = "Привет!"/>
         <context>
             <pattern name = "List" value = "$Text(,| и)"/>
-            <input pattern = "$Text(,| и)">
+            <input pattern = "repeat($List)">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
                             i = 0;
                             str = "[";
-                            while ($Text[i]) {
+                            while ($List[i]) {
                                 if (i != 0) {
                                     str += ',';
                                 }
-                                str += '"' + $Text[i] + '"';
+                                str += '"' + $List[i] + '"';
                                 i++;
                             }
                             str += ']';
