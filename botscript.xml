@@ -2,8 +2,8 @@
     <input pattern = "/start">
         <output value = "Привет!"/>
         <context>
-            <pattern name = "List" value = "$Text(,|и|)"/>
-            <input pattern = "repeat($List)">
+            <pattern name = "List" value = "$Text(,|и|.)"/>
+            <input pattern = "* [меня] repeat($List) *">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
@@ -21,6 +21,23 @@
                         ]]>
                     </script>
                 </var>
+                <output>
+                    <script>
+                        <![CDATA[
+                            i = 0;
+                            str = "У Вас ";
+                            while ($Symptomes[i]) {
+                                str += $Symptomes[i];
+                                if ($Symptomes[i + 1]) {
+                                    str += ', ';
+                                } else {
+                                    str += '.';
+                                }
+                            }
+                            str;
+                        ]]>
+                    </script>
+                </output>
             </input>
         </context>
     </input>
