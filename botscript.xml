@@ -1,8 +1,8 @@
 <context>
     <input pattern = "/start">
         <output value = "Привет!"/>
-        <pattern name = "List" value = "$Text (,|и)"/>
         <context>
+            <pattern name = "List" value = "$Text (,|и)"/>
             <input pattern = "repeat($List)">
                 <var name = "Symptomes">
                     <script>
