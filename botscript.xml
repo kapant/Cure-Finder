@@ -2,7 +2,7 @@
     <input pattern = "/start">
         <output value = "Привет!"/>
         <context>
-            <pattern name = "List" value = "$Text(,| и|.)"/>
+            <pattern name = "List" value = "[у|меня] $Text(,| и|.)"/>
             <input pattern = "* [меня] repeat($List) *">
                 <var name = "Symptomes">
                     <script>
