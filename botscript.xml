@@ -7,7 +7,7 @@
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
-                            if ($List) {
+                            if ($List[0]) {
                                 i = 0;
                                 str = "[";
                                 while ($List[i]) {
