@@ -25,6 +25,35 @@
                         ]]>
                     </script>
                 </var>
+
+                <context>
+                    <var name = "Cures">
+                        <script>
+                            <![CDATA[
+                                JSON.parse("
+                                    [
+                                        {
+                                            "name": "cure1",
+                                            "symp": "symp1"
+                                        },
+                                        {
+                                            "name": "cure2",
+                                            "symp": "symp2"
+                                        },
+                                        {
+                                            "name": "cure3",
+                                            "symp": "symp3"
+                                        },
+                                        {
+                                            "name": "cure4",
+                                            "symp": "symp4"
+                                        }
+                                    ]
+                                ");
+                            ]]>
+                        </script>
+                    </var>
+                </context>
             </input>
 
             <input pattern = "* (ничего|хорош*|нормальн*) *">
