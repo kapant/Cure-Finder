@@ -40,7 +40,7 @@
                             i = 0;
                             while ($Symptomes[i]) {
                                 j = 0;
-                                while ($Cures[j]) {
+                                while ($Cures[j].name) {
                                     if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
                                         if (str) {
                                             str += ", " + $Cures[j];
