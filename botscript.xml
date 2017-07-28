@@ -9,7 +9,7 @@
                         <![CDATA[
                             if ($Text) {
                                 $Text;
-                            } else {
+                            } /*else {
                                 i = 0;
                                 str = "[";
                                 while ($List[i]) {
@@ -21,7 +21,7 @@
                                 }
                                 str += ']';
                                 JSON.parse(str);
-                            }
+                            }*/
                         ]]>
                     </script>
                 </var>
