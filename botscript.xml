@@ -3,13 +3,11 @@
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
             <pattern name = "List" value = "[у[меня]] $Text(,| и|.)"/>
-            <input pattern = "[у] [меня] [беспокоит] (repeat($List)|($Text.))">
+            <input pattern = "[у] [меня] [беспокоит] repeat($List)">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
-                            if ($Text) {
-                                $Text;
-                            } /*else {
+                            if ($List[1]) {
                                 i = 0;
                                 str = "[";
                                 while ($List[i]) {
@@ -21,7 +19,9 @@
                                 }
                                 str += ']';
                                 JSON.parse(str);
-                            }*/
+                            } else {
+                                $List[0];
+                            }
                         ]]>
                     </script>
                 </var>
