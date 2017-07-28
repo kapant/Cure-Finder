@@ -21,7 +21,7 @@
                         ]]>
                     </script>
                 </var>
-                <output value = "У вас join($List, ", ")"/>
+                <output value = "У вас join($List, ', ')"/>
             </input>
         </context>
     </input>
