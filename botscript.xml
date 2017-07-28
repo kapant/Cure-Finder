@@ -3,7 +3,7 @@
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
             <pattern name = "List" value = "[у[меня]] $Text(,| и|.)"/>
-            <input pattern = "* [меня] [беспокоит] (repeat($List)|[у[меня]] $Text(,| и|.))">
+            <input pattern = "* [меня] [беспокоит] (repeat($List)|([у[меня]] $Text(,| и|.)))">
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
