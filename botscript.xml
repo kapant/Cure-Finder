@@ -1,7 +1,7 @@
 <context>
     <input pattern = "/start">
-        <output value = "Привет!"/>
-        <context>
+        <output value = "Здравствуйте, что вас беспокоит?"/>
+        <context id = "begin">
             <pattern name = "List" value = "[у|меня] $Text(,| и|.)"/>
             <input pattern = "* [меня] repeat($List) *">
                 <var name = "Symptomes">
@@ -21,7 +21,16 @@
                         ]]>
                     </script>
                 </var>
-                <output value = "join($List, ', ')"/>
+            </input>
+
+            <input pattern = "* (ничего|хорош*|нормальн*) *">
+                <output value = "Если будете чувствовать себя нехорошо - пишите."/>
+                <context id = "begin"/>
+            </input>
+
+            <input pattern = "*">
+                <output value = "Простите, я вас не понимаю. Что вас беспокоит?"/>
+                <context id = "begin"/>
             </input>
         </context>
     </input>
