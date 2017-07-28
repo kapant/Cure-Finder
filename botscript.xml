@@ -30,7 +30,7 @@
                     <var name = "Cures">
                         <script>
                             <![CDATA[
-                                str = "
+                                JSON.parse('
                                     [
                                         {
                                             "name": "cure1",
@@ -49,7 +49,7 @@
                                             "symp": "symp4"
                                         }
                                     ]
-                                ";
+                                ');
                             ]]>
                         </script>
                     </var>
