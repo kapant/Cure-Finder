@@ -21,23 +21,7 @@
                         ]]>
                     </script>
                 </var>
-                <output>
-                    <script>
-                        <![CDATA[
-                            i = 0;
-                            str = "У Вас ";
-                            while ($Symptomes[i]) {
-                                str += $Symptomes[i];
-                                if ($Symptomes[i + 1]) {
-                                    str += ', ';
-                                } else {
-                                    str += '.';
-                                }
-                            }
-                            str;
-                        ]]>
-                    </script>
-                </output>
+                <output value = "У вас join($List, ", ")"/>
             </input>
         </context>
     </input>
