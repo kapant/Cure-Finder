@@ -36,6 +36,7 @@
                 <var name = "Response">
                     <script>
                         <![CDATA[
+                            str = "";
                             if (typeof($Symptomes) == "string") {
                                 j = 0;
                                 while ($Cures[j]) {
@@ -50,11 +51,7 @@
                                     j++;
                                 }
                                 if (!$Cures[j]) {
-                                    if (str) {
-                                        str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes;
-                                    } else {
-                                        str += "извините, я не смогу вам помочь, если у вас " + $Symptomes;
-                                    }
+                                    str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes;
                                 }
                             } else {
                                 i = 0;
@@ -72,11 +69,7 @@
                                         j++;
                                     }
                                     if (!$Cures[j]) {
-                                        if (str) {
-                                            str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
-                                        } else {
-                                            str += "извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
-                                        }
+                                        str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
                                     }
                                     i++;
                                 }
