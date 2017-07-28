@@ -51,7 +51,7 @@
                                     }
                                     j++;
                                 }
-                                if (!$Cures[j]) {
+                                if (!$Cures[j].name) {
                                     if (str) {
                                         str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
                                     } else {
