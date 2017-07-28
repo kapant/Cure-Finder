@@ -38,10 +38,10 @@
                         <![CDATA[
                             str = "Возможно, вам поможет ";
                             i = 0;
-                            while ($Symptomes[i]) {
+                            if (typeof($Symptomes) == "string") {
                                 j = 0;
                                 while (typeof($Cures[j]) != "undefined") {
-                                    if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
+                                    if ($Symptomes.indexOf($Cures[j].symp) != -1) {
                                         if (str) {
                                             str += ", " + $Cures[j];
                                         } else {
@@ -53,12 +53,34 @@
                                 }
                                 if (typeof($Cures[j]) == "undefined") {
                                     if (str) {
-                                        str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                        str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes;
                                     } else {
-                                        str += "извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                        str += "извините, я не смогу вам помочь, если у вас " + $Symptomes;
                                     }
                                 }
-                                i++;
+                            } else {
+                                while (typeof($Symptomes[i]) != "undefined") {
+                                    j = 0;
+                                    while (typeof($Cures[j]) != "undefined") {
+                                        if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
+                                            if (str) {
+                                                str += ", " + $Cures[j];
+                                            } else {
+                                                str += $Cures[j];
+                                            }
+                                            break;
+                                        }
+                                        j++;
+                                    }
+                                    if (typeof($Cures[j]) == "undefined") {
+                                        if (str) {
+                                            str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                        } else {
+                                            str += "извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                        }
+                                    }
+                                    i++;
+                            }
                             }
                             str += ".";
                             str;
