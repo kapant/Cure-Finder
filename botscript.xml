@@ -7,7 +7,9 @@
                 <var name = "Symptomes">
                     <script>
                         <![CDATA[
-                            if ($List[0]) {
+                            if ($Text) {
+                                $Text;
+                            } else {
                                 i = 0;
                                 str = "[";
                                 while ($List[i]) {
@@ -19,8 +21,6 @@
                                 }
                                 str += ']';
                                 JSON.parse(str);
-                            } else {
-                                $Text;
                             }
                         ]]>
                     </script>
