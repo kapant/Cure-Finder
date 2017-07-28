@@ -1,10 +1,17 @@
 <context>
+    <var name = "Cures" scope = "user">
+        <script>
+            <![CDATA[
+                JSON.parse('[ { "name": "супрастин", "symp": "аллерг" }, { "name": "дротаверин", "symp": "гастрит" }, { "name": "мезим", "symp": "живот" }, { "name": "линекс", "symp": "тошн" }, { "name": "гастал", "symp": "изжога" }, { "name": "риофлора", "symp": "понос" } ]');
+            ]]>
+        </script>
+    </var>
     <input pattern = "/start">
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
             <pattern name = "List" value = "[у[меня]] $Text(,| и|.)"/>
             <input pattern = "[у] [меня] [беспокоит] repeat($List)">
-                <var name = "Symptomes">
+                <var name = "Symptomes" scope = "input">
                     <script>
                         <![CDATA[
                             if (typeof($List) == "string") {
@@ -26,15 +33,42 @@
                     </script>
                 </var>
 
-                <context>
-                    <var name = "Cures">
-                        <script>
-                            <![CDATA[
-                                JSON.parse('[ { "name": "cure1", "symp": "symp1" }, { "name": "cure2", "symp": "symp2" }, { "name": "cure3", "symp": "symp3" }, { "name": "cure4", "symp": "symp4" } ]');
-                            ]]>
-                        </script>
-                    </var>
-                </context>
+                <var name = "Response">
+                    <script>
+                        <![CDATA[
+                            str = "Возможно, вам поможет ";
+                            i = 0;
+                            while ($Symptomes[i]) {
+                                j = 0;
+                                while ($Cures[j]) {
+                                    if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
+                                        if (str) {
+                                            str += ", " + $Cures[j];
+                                        } else {
+                                            str += $Cures[j];
+                                        }
+                                        break;
+                                    }
+                                    j++;
+                                }
+                                if (!$Cures[j]) {
+                                    if (str) {
+                                        str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                    } else {
+                                        str += "извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
+                                    }
+                                }
+                                i++;
+                            }
+                            str += ".";
+                            str;
+                        ]]>
+                    </script>
+                </var>
+
+                <output value = "$Response Если будете чувствовать себя нехорошо - пишите."/>
+                
+                <context id = "begin"/>    
             </input>
 
             <input pattern = "* (ничего|хорош*|нормальн*) *">
