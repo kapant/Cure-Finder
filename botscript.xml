@@ -37,7 +37,6 @@
                     <script>
                         <![CDATA[
                             str = "Возможно, вам поможет ";
-                            i = 0;
                             if (typeof($Symptomes) == "string") {
                                 j = 0;
                                 while ($Cures[j]) {
@@ -59,6 +58,7 @@
                                     }
                                 }
                             } else {
+                                i = 0;
                                 while ($Symptomes[i]) {
                                     j = 0;
                                     while ($Cures[j]) {
