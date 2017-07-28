@@ -36,7 +36,6 @@
                 <var name = "Response">
                     <script>
                         <![CDATA[
-                            str = "Возможно, вам поможет ";
                             if (typeof($Symptomes) == "string") {
                                 j = 0;
                                 while ($Cures[j]) {
@@ -81,8 +80,8 @@
                                     }
                                     i++;
                                 }
-                            }
-                            str += ".";
+                            } 
+                            str = "Возможно, вам поможет " + str + ".";
                             str;
                         ]]>
                     </script>
