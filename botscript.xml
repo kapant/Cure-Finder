@@ -38,9 +38,9 @@
                         <![CDATA[
                             str = "Возможно, вам поможет ";
                             i = 0;
-                            if ($Symptomes) {
+                            if (typeof($Symptomes) == "string") {
                                 j = 0;
-                                while ($Cures[j].name) {
+                                while ($Cures[j]) {
                                     if ($Symptomes.indexOf($Cures[j].symp) != -1) {
                                         if (str) {
                                             str += ", " + $Cures[j].name;
@@ -51,7 +51,7 @@
                                     }
                                     j++;
                                 }
-                                if (!$Cures[j].name) {
+                                if ($Cures[j]) {
                                     if (str) {
                                         str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes;
                                     } else {
@@ -61,7 +61,7 @@
                             } else {
                                 while ($Symptomes[i]) {
                                     j = 0;
-                                    while ($Cures[j].name) {
+                                    while ($Cures[j]) {
                                         if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
                                             if (str) {
                                                 str += ", " + $Cures[j].name;
@@ -72,7 +72,7 @@
                                         }
                                         j++;
                                     }
-                                    if (!$Cures[j].name) {
+                                    if ($Cures[j]) {
                                         if (str) {
                                             str += ", извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
                                         } else {
