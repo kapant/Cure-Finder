@@ -60,7 +60,7 @@
                                 }
                             } else {
                                 while (typeof($Symptomes[i]) != "undefined") {
-                                    j = 0;
+                                    /*j = 0;
                                     while (typeof($Cures[j]) != "undefined") {
                                         if ($Symptomes[i].indexOf($Cures[j].symp) != -1) {
                                             if (str) {
@@ -78,9 +78,9 @@
                                         } else {
                                             str += "извините, я не смогу вам помочь, если у вас " + $Symptomes[i];
                                         }
-                                    }
+                                    }*/
                                     i++;
-                            }
+                                }
                             }
                             str += ".";
                             str;
