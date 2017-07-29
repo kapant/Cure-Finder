@@ -1,4 +1,11 @@
-<script> <![CDATA[
-    JSON.parse('[ { "name": "супрастин", "symp": "аллерг" }, { "name": "дротаверин", "symp": "гастрит" }, { "name": "мезим", "symp": "живот" }, { "name": "линекс", "symp": "тошн" }, { "name": "гастал", "symp": "изжога" }, { "name": "риофлора", "symp": "понос" } ]'); 
-    ]]>
-</script>
+ function makeCures() {
+    str = "[";
+    str += '{ "name": "супрастин", "symp": "аллерг" }'
+    str += ', { "name": "дротаверин", "symp": "гастрит" }'
+    str += ', { "name": "мезим", "symp": "живот" }'
+    str += ', { "name": "линекс", "symp": "тошн" }'
+    str += ', { "name": "гастал", "symp": "изжога" }'
+    str += ', { "name": "риофлора", "symp": "понос" }'
+    str += ']'
+    return JSON.parse(str);
+}
