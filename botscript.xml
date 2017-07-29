@@ -1,7 +1,7 @@
 <context>
     <input pattern = "/start">
         <var name = "Cures" scope = "user">
-            <script source = "javascript: makeCures()"/>
+            <script value = "javascript: makeCures()"/>
         </var>
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
