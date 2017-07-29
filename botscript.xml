@@ -1,11 +1,7 @@
 <context>
     <input pattern = "/start">
         <var name = "Cures" scope = "user">
-            <script>
-                <![CDATA[
-                    JSON.parse('[ { "name": "супрастин", "symp": "аллерг" }, { "name": "дротаверин", "symp": "гастрит" }, { "name": "мезим", "symp": "живот" }, { "name": "линекс", "symp": "тошн" }, { "name": "гастал", "symp": "изжога" }, { "name": "риофлора", "symp": "понос" } ]');
-                ]]>
-            </script>
+            <script source = "data.js"/>
         </var>
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
