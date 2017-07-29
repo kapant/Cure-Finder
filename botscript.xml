@@ -1,7 +1,11 @@
 <context>
     <input pattern = "/start">
         <var name = "Cures" scope = "user">
-            <script value = "javascript: makeCures()"/>
+            <script>
+                <![CDATA[
+                    makeCures();
+                ]]>
+            </script>
         </var>
         <output value = "Здравствуйте, что вас беспокоит?"/>
         <context id = "begin">
