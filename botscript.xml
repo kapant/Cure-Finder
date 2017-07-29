@@ -96,7 +96,7 @@
 
                     Если вас что-то беспокоит - пишите.
                 </output>
-                <conext id = "begin"/>
+                <context id = "begin"/>
             </input>
 
             <input pattern = "*">
