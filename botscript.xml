@@ -41,6 +41,9 @@
                                         i++;
                                     }
                                 }
+                                if (i != 0) {
+                                    str += ',';
+                                }
                                 str += '"' + $Text + '"';
                                 str += ']';
                                 JSON.parse(str);
