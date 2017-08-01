@@ -34,7 +34,7 @@
                                 str = "[";
                                 if (typeof($List) != "undefined") {
                                     if (typeof($List) == "string") {
-                                        str += '"' + $List[i] + '"';
+                                        str += '"' + $List + '"';
                                         i++;
                                     } else{
                                         while ($List[i]) {
