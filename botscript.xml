@@ -141,10 +141,10 @@
             </input>
 
             <!--Непонятный текст-->
-            <input pattern = "*">
+            <!--<input pattern = "*">
                 <output value = "Простите, я вас не понимаю. Что вас беспокоит?"/>
                 <context id = "begin"/>
-            </input>
+            </input>-->
         </context>
     </input>
 </context>
