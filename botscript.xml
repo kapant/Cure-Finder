@@ -33,12 +33,17 @@
                                 i = 0;
                                 str = "[";
                                 if (typeof($List) != "undefined") {
-                                    while ($List[i]) {
-                                        if (i != 0) {
-                                            str += ',';
-                                        }
+                                    if (typeof($List) == "string") {
                                         str += '"' + $List[i] + '"';
                                         i++;
+                                    } else{
+                                        while ($List[i]) {
+                                            if (i != 0) {
+                                                str += ',';
+                                            }
+                                            str += '"' + $List[i] + '"';
+                                            i++;
+                                        }
                                     }
                                 }
                                 if (i != 0) {
