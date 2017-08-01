@@ -32,12 +32,14 @@
                                 //Составление списка в виде JSON-объекта
                                 i = 0;
                                 str = "[";
-                                while ($List[i]) {
-                                    if (i != 0) {
-                                        str += ',';
+                                if (typeof($List) != "undefinded") {
+                                    while ($List[i]) {
+                                        if (i != 0) {
+                                            str += ',';
+                                        }
+                                        str += '"' + $List[i] + '"';
+                                        i++;
                                     }
-                                    str += '"' + $List[i] + '"';
-                                    i++;
                                 }
                                 str += '"' + $Text + '"';
                                 str += ']';
